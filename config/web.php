@@ -49,7 +49,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => ['user','info','token']]//控制器,
+                ['class' => 'yii\rest\UrlRule', 'controller' => ['user','info','token','navbar']]//控制器,
             ],
         ],
 

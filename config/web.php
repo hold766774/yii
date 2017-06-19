@@ -10,17 +10,19 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'abffefdfe',
+            'cookieValidationKey' => 'afefdfe',
             'parsers'=>[
-                'application/json' => 'yii\web\JsonParser',
-            ]
+                'application/json'=>'yii\web\JsonParser',
+                'text/json'=>'yii\web\JsonParser',
+            ],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+           /* 'identityClass' => 'app\models\User',
+            'enableAutoLogin' => true,*/
+            'identityClass' => 'app\m\Clients',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -47,7 +49,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => ['user','info','token']]//控制器,
             ],
         ],
 

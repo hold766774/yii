@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: 覃雪平
- * Date: 2017/6/16
- * Time: 10:28
+ * Date: 2017/6/15
+ * Time: 18:02
  */
 namespace app\m;
 
@@ -18,7 +18,9 @@ class News extends ActiveRecord
     {
         return 'news';
     }
-    public function getNewsClass(){
+    public function getNewsClass()
+    {
+        //NewsClass的class_id
         return $this->hasOne(NewsClass::className(), ['class_id' => 'news_classid']);
     }
 }

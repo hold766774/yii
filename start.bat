@@ -1,0 +1,1 @@
+F:\phpStudy\php70n\php.exe -S 127.0.0.1:9090 -t F:\phpStudy\WWW\yii\web
